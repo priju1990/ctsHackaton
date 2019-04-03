@@ -1,0 +1,215 @@
+Started by user Priya
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\springboot-build
+using credential git
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url http://172.18.2.18/priyaraju/743698-Hackathon-Backend.git # timeout=10
+Fetching upstream changes from http://172.18.2.18/priyaraju/743698-Hackathon-Backend.git
+ > git.exe --version # timeout=10
+using GIT_SSH to set credentials git
+ > git.exe fetch --tags --progress http://172.18.2.18/priyaraju/743698-Hackathon-Backend.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Merging Revision c259a989afedec2e1a2ccee26c29e5a1c983e7f9 (refs/remotes/origin/master) to origin/production, UserMergeOptions{mergeRemote='origin', mergeTarget='production', mergeStrategy='default', fastForwardMode='--ff'}
+ > git.exe rev-parse "origin/production^{commit}" # timeout=10
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f origin/production
+ > git.exe merge --ff c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+ > git.exe rev-parse "HEAD^{commit}" # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/production
+Seen 2 remote branches
+ > git.exe show-ref --tags -d # timeout=10
+Checking out Revision c259a989afedec2e1a2ccee26c29e5a1c983e7f9 (origin/production, origin/master, refs/tags/jenkins-springboot-build-15-SUCCESS, refs/tags/jenkins-springboot-build-12-SUCCESS, refs/tags/jenkins-springboot-build-14-SUCCESS, refs/tags/jenkins-springboot-build-13-SUCCESS, origin/production)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f c259a989afedec2e1a2ccee26c29e5a1c983e7f9
+Commit message: "Initial commit"
+ > git.exe rev-list --no-walk c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+ > git.exe rev-list --no-walk c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+ > git.exe rev-list --no-walk c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+ > git.exe rev-list --no-walk c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+ > git.exe rev-list --no-walk c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+ > git.exe rev-list --no-walk c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+ > git.exe rev-list --no-walk c259a989afedec2e1a2ccee26c29e5a1c983e7f9 # timeout=10
+[springboot-build] $ cmd.exe /C '""C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Maven_MavenInstallation\My_Maven\bin\mvn.cmd"' -f C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\pom.xml clean install && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.mailer:Mailer:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-mail:jar -> duplicate declaration of version (?) @ line 57, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Mailer 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ Mailer ---
+[INFO] Deleting C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ Mailer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ Mailer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\target\classes
+[INFO] /C:/Users/Admin/Desktop/Project/workspace-sts-3.9.7.RELEASE/Mailer/src/main/java/com/hacker/mail/controller/FeedbackController.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Users/Admin/Desktop/Project/workspace-sts-3.9.7.RELEASE/Mailer/src/main/java/com/hacker/mail/controller/FeedbackController.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ Mailer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ Mailer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ Mailer ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.hacker.TestAdminController
+10:39:46.740 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 6 mappings in <unknown>
+10:39:47.619 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+10:39:47.620 [main] INFO org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.0.14.Final
+10:39:47.649 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+10:39:47.651 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+10:39:47.698 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+10:39:47.699 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+10:39:47.700 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+10:39:47.711 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+10:39:47.714 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+10:39:47.716 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+10:39:47.716 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+10:39:48.047 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+10:39:48.047 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+10:39:48.047 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+10:39:48.047 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+10:39:48.047 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+10:39:48.115 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:39:48.200 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:39:48.260 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:39:48.260 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:39:48.265 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:39:48.265 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:39:48.265 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@cbf1a
+10:39:48.265 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1e8b721
+10:39:48.266 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:39:48.266 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 6 ms
+10:39:48.433 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/createRole", parameters={}
+10:39:48.440 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to public org.springframework.http.ResponseEntity<java.lang.String> com.hacker.mail.controller.AdminController.createUser(com.hacker.mail.dao.Admin) throws org.apache.poi.EncryptedDocumentException,java.io.IOException
+10:39:48.594 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.hacker.mail.dao.Admin@9b028e]
+COming to springg90909090
+Apr 03, 2019 10:39:48 AM com.hacker.mail.controller.AdminController createUser
+INFO: Already exists
+10:39:48.665 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+10:39:48.665 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Nothing to write: null body
+10:39:48.669 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 409 CONFLICT
+10:39:48.702 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 6 mappings in <unknown>
+10:39:48.711 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+10:39:48.713 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+10:39:48.715 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+10:39:48.715 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+10:39:48.715 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+10:39:48.716 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+10:39:48.716 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+10:39:48.718 [main] DEBUG org.hibernate.validator.internal.xml.config.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+10:39:48.720 [main] DEBUG org.hibernate.validator.internal.xml.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+10:39:48.735 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+10:39:48.735 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.JPATraversableResolver as ValidatorFactory-scoped traversable resolver.
+10:39:48.735 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+10:39:48.736 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+10:39:48.736 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+10:39:48.738 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+10:39:48.744 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+10:39:48.744 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+10:39:48.744 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+10:39:48.744 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+10:39:48.744 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+10:39:48.744 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1e80a5e
+10:39:48.744 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@18e2eea
+10:39:48.745 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+10:39:48.745 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 1 ms
+10:39:48.747 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/createRole", parameters={}
+10:39:48.747 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to public org.springframework.http.ResponseEntity<java.lang.String> com.hacker.mail.controller.AdminController.createUser(com.hacker.mail.dao.Admin) throws org.apache.poi.EncryptedDocumentException,java.io.IOException
+10:39:48.752 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.hacker.mail.dao.Admin@139e1]
+COming to springg90909090
+10:39:48.753 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+10:39:48.753 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Nothing to write: null body
+10:39:48.753 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.151 s - in com.hacker.TestAdminController
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ Mailer ---
+[INFO] Building jar: C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\target\Mailer-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.2.RELEASE:repackage (repackage) @ Mailer ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ Mailer ---
+[INFO] Installing C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\target\Feedback-system.jar to C:\Windows\system32\config\systemprofile\.m2\repository\com\mailer\Mailer\0.0.1-SNAPSHOT\Mailer-0.0.1-SNAPSHOT.jar
+[INFO] Installing C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer\pom.xml to C:\Windows\system32\config\systemprofile\.m2\repository\com\mailer\Mailer\0.0.1-SNAPSHOT\Mailer-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 15.124 s
+[INFO] Finished at: 2019-04-03T10:39:51+05:30
+[INFO] Final Memory: 47M/112M
+[INFO] ------------------------------------------------------------------------
+[springboot-build] $ cmd /c call C:\Windows\TEMP\jenkins8965945000914258151.bat
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>cd "C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer" 
+
+C:\Users\Admin\Desktop\Project\workspace-sts-3.9.7.RELEASE\Mailer>exit 0 
+[springboot-build] $ cmd /c call C:\Windows\TEMP\jenkins1784521385865514308.bat
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>dockerx stop feedback-system 
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>Docker -H=172.18.2.50:2375  stop feedback-system 
+feedback-system
+[springboot-build] $ cmd /c call C:\Windows\TEMP\jenkins3517203402273909941.bat
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>dockerx rm feedback-system 
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>Docker -H=172.18.2.50:2375  rm feedback-system 
+feedback-system
+[springboot-build] $ cmd /c call C:\Windows\TEMP\jenkins2830425248521871780.bat
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>dockerx build . -t feedback-system  
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>Docker -H=172.18.2.50:2375  build . -t feedback-system 
+Sending build context to Docker daemon  80.33MB
+
+Step 1/5 : FROM openjdk:8
+ ---> b8d3f94869bb
+Step 2/5 : VOLUME /resources
+ ---> Using cache
+ ---> 2a9b62be2681
+Step 3/5 : ADD target/Feedback-system.jar Feedback-system.jar
+ ---> Using cache
+ ---> 19ce70ea0f6f
+Step 4/5 : EXPOSE 9090
+ ---> Using cache
+ ---> 327aa7168ac9
+Step 5/5 : ENTRYPOINT ["java", "-jar","Feedback-system.jar"]
+ ---> Using cache
+ ---> 1b85405c75c3
+Successfully built 1b85405c75c3
+Successfully tagged feedback-system:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+[springboot-build] $ cmd /c call C:\Windows\TEMP\jenkins976223867618391254.bat
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>dockerx run --name=feedback-system --network=feedback-system-network -p 9090:9090 -d feedback-system 
+
+C:\Program Files (x86)\Jenkins\workspace\springboot-build>Docker -H=172.18.2.50:2375  run --name=feedback-system --network=feedback-system-network -p 9090:9090 -d feedback-system 
+8a335141675e5c48e6c9900ec8818ceac8ffe48fe12674f6c26fe68bf498d032
+Finished: SUCCESS

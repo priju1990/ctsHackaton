@@ -1,0 +1,11 @@
+1.When the jar is deployed, emails are triggered for associates who have attended the event/ unregistered/ no show
+2. Click on the links in the emails will direct to feedback form where feedback can be submitted
+3. When logged in as admin, the different screens he can see is recorded in the video
+4. When PMO logs in, he can see the avg feedback by City,Country etc
+5. Wnen POC logs in he can see avg feedback submitted for his respective event.
+6. The whole thing is made as micorservice.
+7. Has been put into docker network.
+8. Had faced problem in dockerizing react app as it contains routes. So tried to deploy in azure cloud. But cloud and IIH envirnments are having some netowrk isues, hence those reqsts are getting rejected.
+Hence rect is running in local and hitting the dockerized MS directly.
+(PS. azure link for react -https://sampleazureapp1.azurewebsites.net/  )
+8. jenkins is not working in my VM. Had raised multiple complaints still not resolved. So that is pending

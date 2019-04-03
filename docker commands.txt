@@ -1,0 +1,19 @@
+dockerx pull mysql/mysql-server  => pull mysql server image
+
+
+dockerx exec -it mysql-standalone mysql -uroot -p ==> to open sql editor
+dockerx build . -t eureka-server ==> create the docker image for eureka
+dockerx build . -t feedback-system --> run these cmd in the resp folders where docker file resided.
+dockerx build . -t zuul-gateway
+
+now create a network to run these images
+-------------------------------------------------
+
+dockerx network create --driver bridge feedback-system-network
+now run the 3 images on this network
+dockerx run --name=eureka-server --network=feedback-system-network -p 1111:1111 -d eureka-server
+dockerx run --name=feedback-system --network=feedback-system-network -p 9090:9090 -d feedback-system
+dockerx run --name=zuul-gateway --network=feedback-system-network -p 8500:8500 -d zuul-gateway
+dockerx run --name=mysql-standalone --network=feedback-system-network -e MYSQL_ROOT_PASSWORD=pass@word1 -e MYSQL_DATABASE=outreach -e MYSQL_USER=root -e MYSQL_PASSWORD=pass@word1 -d mysql:5.6 
+ 
+ 
